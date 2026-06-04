@@ -1,0 +1,202 @@
+/* ===== SITANSU ACHARYA · BLOG ===== */
+:root {
+  --cream:       #FAF7F2;
+  --cream-deep:  #F2EDE4;
+  --saffron:     #C8710F;
+  --saffron-lt:  #E8891A;
+  --ink:         #1C1C1C;
+  --ink-soft:    #4A4A4A;
+  --line:        #E0D8CC;
+  --card-bg:     #FFFFFF;
+  --ease:        cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 {
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.25;
+  color: var(--ink);
+}
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 500; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 500; }
+h3 { font-size: 1.4rem; font-weight: 500; }
+h4 { font-size: 1.1rem; font-weight: 500; }
+p  { color: var(--ink-soft); margin-bottom: 1.2em; }
+p:last-child { margin-bottom: 0; }
+a  { color: var(--saffron); text-decoration: none; }
+a:hover { text-decoration: underline; }
+em { color: var(--saffron); font-style: italic; }
+strong { color: var(--ink); font-weight: 600; }
+
+img { max-width: 100%; display: block; border-radius: 6px; }
+
+/* ── LAYOUT ── */
+.container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+.container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+section { padding: 72px 0; }
+
+/* ── NAV ── */
+.site-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,247,242,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; gap: 32px; height: 60px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Lora', serif; font-size: 1rem;
+  color: var(--ink); text-decoration: none; flex-shrink: 0;
+}
+.brand-mark {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--saffron); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: .9rem;
+}
+.nav-links {
+  display: flex; gap: 28px; list-style: none; margin-left: auto;
+}
+.nav-links a {
+  font-size: .82rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-soft); text-decoration: none; transition: color .2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--saffron); }
+
+/* ── HERO (homepage) ── */
+.blog-hero {
+  padding: 100px 0 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.blog-hero .eyebrow {
+  display: block;
+  font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--saffron); margin-bottom: 20px;
+}
+.blog-hero h1 { margin-bottom: 16px; }
+.blog-hero p { font-size: 1.05rem; max-width: 520px; margin: 0 auto; }
+
+/* ── POST CARDS ── */
+.posts-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  margin-top: 56px;
+}
+@media(max-width:640px) { .posts-grid { grid-template-columns: 1fr; } }
+
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.08); }
+.post-card:hover { text-decoration: none; }
+
+.post-card .thumb {
+  width: 100%; aspect-ratio: 16/9; overflow: hidden;
+}
+.post-card .thumb img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 0;
+  transition: transform .4s var(--ease);
+}
+.post-card:hover .thumb img { transform: scale(1.04); }
+
+.post-card .body { padding: 28px 24px 32px; flex: 1; display: flex; flex-direction: column; }
+.post-card .tag {
+  display: inline-block;
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--saffron); margin-bottom: 12px;
+}
+.post-card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--ink); }
+.post-card p { font-size: .93rem; flex: 1; }
+.post-card .meta {
+  margin-top: 20px;
+  font-size: .78rem; color: #999; letter-spacing: .04em;
+}
+
+/* ── SINGLE POST ── */
+.post-header {
+  padding: 80px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+.breadcrumb {
+  font-size: .78rem; color: #999; margin-bottom: 20px;
+}
+.breadcrumb a { color: var(--saffron); }
+.post-header .tag {
+  display: inline-block;
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--saffron); margin-bottom: 16px;
+}
+.post-header h1 { margin-bottom: 20px; }
+.post-meta { font-size: .82rem; color: #999; }
+
+.post-hero-img {
+  width: 100%; max-height: 480px; object-fit: cover;
+  border-radius: 10px; margin: 48px 0;
+}
+
+.post-body { padding-bottom: 80px; }
+.post-body p { font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.4em; }
+.post-body h2 { margin: 2em 0 .6em; font-size: 1.5rem; }
+.post-body h3 { margin: 1.6em 0 .5em; font-size: 1.2rem; }
+.post-body blockquote {
+  border-left: 3px solid var(--saffron);
+  padding: 16px 24px;
+  margin: 2em 0;
+  background: var(--cream-deep);
+  border-radius: 0 6px 6px 0;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+.post-body .post-img {
+  margin: 2.4em 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+}
+.post-body .caption {
+  font-size: .8rem; color: #aaa; text-align: center; margin-top: -1.6em; margin-bottom: 2em;
+}
+
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--saffron); text-decoration: none; margin-bottom: 28px;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.55);
+  padding: 40px 0;
+  text-align: center;
+  font-size: .82rem;
+}
+.site-footer a { color: rgba(255,255,255,.6); }
+.site-footer a:hover { color: var(--saffron); }
+.site-footer .footer-name { color: var(--saffron); font-family: 'Lora', serif; font-style: italic; }
