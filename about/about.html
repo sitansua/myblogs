@@ -8,23 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
   <style>
     .about-grid {
       display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 64px;
+      grid-template-columns: 1fr;
+      gap: 48px;
       align-items: start;
-    }
-    @media(max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
     }
     .about-photo {
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
-      object-position: 20% center;
-      aspect-ratio: 3/4;
+      object-position: center 20%;
+      aspect-ratio: 16/7;
       box-shadow: 0 8px 32px rgba(0,0,0,.10);
     }
     .about-text .eyebrow {
@@ -62,6 +59,40 @@
     .social-link:hover {
       background: var(--saffron); color: #fff; text-decoration: none;
     }
+    .mottos {
+      display: flex; flex-direction: column; gap: 14px;
+      margin: 28px 0;
+    }
+    .motto-card {
+      display: flex; flex-direction: column;
+      padding: 16px 20px;
+      background: var(--cream-deep);
+      border-left: 3px solid var(--saffron);
+      border-radius: 0 8px 8px 0;
+    }
+    .sanskrit {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: var(--saffron);
+      margin-bottom: 4px;
+    }
+    .motto-transliteration {
+      font-size: .78rem;
+      color: #aaa;
+      letter-spacing: .06em;
+      margin-bottom: 4px;
+    }
+    .motto-text {
+      font-size: .88rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .motto-context {
+      font-size: .84rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
   </style>
 </head>
 <body>
@@ -69,13 +100,13 @@
   <!-- NAV -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="brand">
+      <a href="../index.html" class="brand">
         <span class="brand-mark">S</span>
         <span>Sitansu Acharya</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="../index.html">Blog</a></li>
+        <li><a href="../about/" class="active">About</a></li>
         <li><a href="https://sitansu-acharya-free-soul.blogspot.com/" target="_blank" rel="noopener">Blogspot ↗</a></li>
       </ul>
     </div>
@@ -103,6 +134,24 @@
 
           <p>When I'm not on a trail or a cricket pitch, I work in technology — helping organisations think through engineering, transformation, and what it means to build things that last.</p>
 
+          <!-- PHILOSOPHY -->
+          <h3 style="margin: 36px 0 20px; font-size: 1.1rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft);">My Philosophy</h3>
+
+          <div class="mottos">
+            <div class="motto-card">
+              <span class="sanskrit">शरीरमाद्यं खलु धर्मसाधनम्</span>
+              <span class="motto-transliteration">Sarira Adyam Khalu Dharma Sadhanam</span>
+              <span class="motto-text">"The body is the primary instrument of all endeavour"</span>
+              <span class="motto-context">Everything starts with the body. A strong, healthy body is not vanity — it is the foundation from which all other pursuits become possible. Fitness is not a goal; it is the vehicle.</span>
+            </div>
+            <div class="motto-card">
+              <span class="sanskrit">शनैः शनैः उपरोहेत्</span>
+              <span class="motto-transliteration">Shanaih Shanaih Uparohet</span>
+              <span class="motto-text">"Every expert was once a beginner — rise step by step"</span>
+              <span class="motto-context">No one summits a mountain in a single stride. Mastery is built through patience, repetition, and the willingness to be bad at something before you are good at it. Show up, stay humble, keep climbing.</span>
+            </div>
+          </div>
+
           <div class="interests">
             <span class="interest-tag">🏏 Cricket</span>
             <span class="interest-tag">🏔️ Trekking</span>
@@ -115,7 +164,7 @@
 
           <div class="social-links">
             <a href="https://sitansu-acharya-free-soul.blogspot.com/" class="social-link" target="_blank" rel="noopener">Blogspot</a>
-            <a href="https://www.linkedin.com/in/sitansuacharya" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/sitansu-s-acharya/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
