@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sitansu Acharya</title>
+  <meta name="description" content="Sitansu Acharya — sports & fitness enthusiast, trekker, nature lover, and technology professional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media(max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .about-photo {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      box-shadow: 0 8px 32px rgba(0,0,0,.10);
+    }
+    .about-text .eyebrow {
+      display: block;
+      font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--saffron); margin-bottom: 16px;
+    }
+    .about-text h1 { margin-bottom: 8px; }
+    .about-text .tagline {
+      font-size: 1rem; color: var(--saffron);
+      font-family: 'Lora', serif; font-style: italic;
+      margin-bottom: 32px; display: block;
+    }
+    .interests {
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0;
+    }
+    .interest-tag {
+      padding: 7px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .social-links { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+    .social-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid var(--saffron);
+      border-radius: 999px;
+      color: var(--saffron);
+      font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .social-link:hover {
+      background: var(--saffron); color: #fff; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">S</span>
+        <span>Sitansu Acharya</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="https://sitansu-acharya-free-soul.blogspot.com/" target="_blank" rel="noopener">Blogspot ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ABOUT -->
+  <section style="padding-top: 80px;">
+    <div class="container-wide">
+      <div class="about-grid">
+
+        <div>
+          <img class="about-photo" src="IMG_20251114_090549690_HDR_AE.jpg" alt="Sitansu Acharya — trekking in the Himalayas" />
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow">About me</span>
+          <h1>Sitansu Acharya</h1>
+          <span class="tagline">Free Soul · Explorer · Athlete</span>
+
+          <p>I'm a sports and fitness enthusiast who finds meaning in movement — whether that's chasing a cricket ball, climbing a mountain trail, or simply walking through a forest at dawn.</p>
+
+          <p>The mountains are where I feel most alive. There's something about high altitude that strips away noise and leaves only what matters. This photo was taken at Sandakphu — the highest point in West Bengal — with the Kangchenjunga range behind me. Days like that remind me why I keep going.</p>
+
+          <p>I write about the things that shape me: the discipline of sport, the humility of nature, the unexpected lessons that come from pushing beyond comfort. These aren't essays with answers — they're notes from someone still figuring it out.</p>
+
+          <p>When I'm not on a trail or a cricket pitch, I work in technology — helping organisations think through engineering, transformation, and what it means to build things that last.</p>
+
+          <div class="interests">
+            <span class="interest-tag">🏏 Cricket</span>
+            <span class="interest-tag">🏔️ Trekking</span>
+            <span class="interest-tag">🌿 Nature Walks</span>
+            <span class="interest-tag">⛰️ Mountains</span>
+            <span class="interest-tag">🏃 Fitness</span>
+            <span class="interest-tag">💻 Technology</span>
+            <span class="interest-tag">🙏 Spirituality</span>
+          </div>
+
+          <div class="social-links">
+            <a href="https://sitansu-acharya-free-soul.blogspot.com/" class="social-link" target="_blank" rel="noopener">Blogspot</a>
+            <a href="https://www.linkedin.com/in/sitansuacharya" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="margin-top: 80px;">
+    <div class="container">
+      <p>Written by <span class="footer-name">Sitansu Acharya</span> · <a href="https://sitansu-acharya-free-soul.blogspot.com/" target="_blank" rel="noopener">Original on Blogspot</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
