@@ -1,13 +1,13 @@
 /* ===== SITANSU ACHARYA · BLOG ===== */
 :root {
-  --cream:       #FAF7F2;
-  --cream-deep:  #F2EDE4;
-  --saffron:     #C8710F;
-  --saffron-lt:  #E8891A;
-  --ink:         #1C1C1C;
-  --ink-soft:    #4A4A4A;
-  --line:        #E0D8CC;
-  --card-bg:     #FFFFFF;
+  --cream:       #1A1F2E;
+  --cream-deep:  #252b3d;
+  --saffron:     #D4A843;
+  --saffron-lt:  #E8BF6A;
+  --ink:         #E8DFC8;
+  --ink-soft:    #A0A8BE;
+  --line:        #2d3447;
+  --card-bg:     #1E2438;
   --ease:        cubic-bezier(.4,0,.2,1);
 }
 
@@ -52,7 +52,7 @@ section { padding: 72px 0; }
 /* ── NAV ── */
 .site-nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(250,247,242,.92);
+  background: rgba(26,31,46,.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -110,7 +110,7 @@ section { padding: 72px 0; }
   text-decoration: none; color: inherit;
   display: flex; flex-direction: column;
 }
-.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.08); }
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.4); }
 .post-card:hover { text-decoration: none; }
 
 .post-card .thumb {
@@ -191,8 +191,8 @@ section { padding: 72px 0; }
 
 /* ── FOOTER ── */
 .site-footer {
-  background: var(--ink);
-  color: rgba(255,255,255,.55);
+  background: #111520;
+  color: rgba(255,255,255,.4);
   padding: 40px 0;
   text-align: center;
   font-size: .82rem;
