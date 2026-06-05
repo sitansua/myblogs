@@ -99,7 +99,34 @@ section { padding: 72px 0; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
   margin-top: 56px;
 }
-@media(max-width:640px) { .posts-grid { grid-template-columns: 1fr; } }
+@media(max-width:640px) { .posts-grid { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; } }
+
+/* ── MOBILE ── */
+@media(max-width:640px) {
+  section { padding: 40px 0; }
+
+  /* Nav — shrink gaps, smaller text */
+  .nav-inner { gap: 12px; height: 54px; }
+  .brand span:last-child { display: none; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: .72rem; letter-spacing: .06em; }
+
+  /* Hero */
+  .blog-hero { padding: 56px 0 44px; }
+
+  /* Post header */
+  .post-header { padding: 48px 0 32px; }
+  .post-header h1 { font-size: 1.7rem; }
+
+  /* Post body */
+  .post-body p { font-size: .97rem; }
+  .post-hero-img { margin: 28px 0; }
+
+  /* About photo — shorter on mobile */
+  .about-photo { aspect-ratio: 4/3; object-position: center 15%; }
+
+  /* Stat/science grids already handle 1-col via own media queries */
+}
 
 .post-card {
   background: var(--card-bg);
